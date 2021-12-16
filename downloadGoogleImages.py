@@ -12,7 +12,7 @@ from google_images_download import google_images_download
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html')
+    return "<h1>Chal jaye bhagwaan kasam</h1>"
 
 @app.route('/google', methods=['GET','POST'])
 def main():
