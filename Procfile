@@ -1,1 +1,1 @@
-web: gunicorn app:downloadGoogleImages
+web: gunicorn downloadGoogleImages:app
