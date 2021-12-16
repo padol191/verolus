@@ -18,6 +18,18 @@ def index():
 def google():
     return render_template('google.html')
 
+@app.route('/instagram', methods=['GET'])
+def instagram():
+    return render_template('instagram.html')
+
+@app.route('/website', methods=['GET'])
+def website():
+    return render_template('website.html')
+
+@app.route('/classes', methods=['GET'])
+def classes():
+    return render_template('classes.html')
+
 @app.route('/search', methods=['GET','POST'])
 def main():
     
