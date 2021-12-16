@@ -10,7 +10,7 @@ CORS(app)
 
 from google_images_download import google_images_download
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def main():
     
     search_query=request.json['search']
