@@ -11,10 +11,14 @@ CORS(app)
 from google_images_download import google_images_download
 
 @app.route('/', methods=['GET'])
-def home():
+def index():
     return render_template('index.html')
 
-@app.route('/google', methods=['GET','POST'])
+@app.route('/google', methods=['GET'])
+def google():
+    return render_template('google.html')
+
+@app.route('/search', methods=['GET','POST'])
 def main():
     
     search_query=request.json['search']
