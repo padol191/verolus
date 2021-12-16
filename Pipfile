@@ -8,6 +8,7 @@ flask = "*"
 flask-cors = "*"
 requests = "*"
 gunicorn = "*"
+google-images-download = {git = "https://github.com/Joeclinton1/google-images-download"}
 
 [dev-packages]
 
