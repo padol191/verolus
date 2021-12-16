@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests
 
@@ -10,7 +10,11 @@ CORS(app)
 
 from google_images_download import google_images_download
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
+
+@app.route('/google', methods=['GET','POST'])
 def main():
     
     search_query=request.json['search']
