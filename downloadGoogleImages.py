@@ -50,7 +50,7 @@ def main():
                 "output_directory": os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')}
     # try:
     response.download(arguments)
-    return jsonify({'msg': 'Successful'})
+    return render_template('google.html')
 
         # # Handling File NotFound Error	
         # except FileNotFoundError:
