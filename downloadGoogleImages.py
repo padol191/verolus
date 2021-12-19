@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import requests
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -45,7 +46,8 @@ def main():
                 "limit":numberOfImages,
                 "print_urls":True,
                 "size": "medium",
-                "aspect_ratio":"panoramic"}
+                "aspect_ratio":"panoramic",
+                "output_directory": os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')}
     # try:
     response.download(arguments)
     return jsonify({'msg': 'Successful'})
@@ -73,6 +75,11 @@ def main():
 
     # downloadimages(search_query)
     # print()
+    
+# @app.route('/instasearch', methods=['POST'])
+# def instasearch():
+    
+#     return NoneType
 
 if __name__ == '__main__':
     app.run(debug=False)
