@@ -31,7 +31,7 @@ def website():
 def classes():
     return render_template('classes.html')
 
-@app.route('/search', methods=['GET','POST'])
+@app.route('/search', methods=['POST'])
 def main():
     
     search_query=request.json['search']
