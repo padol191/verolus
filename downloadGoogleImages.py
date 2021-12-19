@@ -47,7 +47,7 @@ def main():
                 "print_urls":True,
                 "size": "medium",
                 "aspect_ratio":"panoramic",
-                "output_directory": 'C:\Users\91961\Desktop\'}
+                "output_directory": 'C:/Users/91961/Desktop'}
     # try:
     response.download(arguments)
     return jsonify({'msg': 'Successful'})
